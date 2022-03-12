@@ -1,0 +1,5 @@
+apache2 mit website aus git
+
+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
+
+wget https://github.com/mena03/vagrant-webserver/tree/main/squid-files/squid.conf
