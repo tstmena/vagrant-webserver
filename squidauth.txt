@@ -1,0 +1,6 @@
+auth_param basic program /usr/lib64/squid3/basic_ncsa_auth /etc/squid3/.squid_users
+auth_param basic realm Proxy Authentication Required
+auth_param basic credentialsttl 5 minutes
+
+acl auth_users proxy_auth squid
+http_access allow auth_users

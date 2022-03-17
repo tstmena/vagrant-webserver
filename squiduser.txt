@@ -1,0 +1,2 @@
+sudo apt-get -y install apache2-utils
+htpasswd -cdb /etc/squid3/.squid_users squid squid123
