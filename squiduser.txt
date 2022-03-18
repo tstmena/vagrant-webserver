@@ -1,2 +1,13 @@
 sudo apt-get -y install apache2-utils
-htpasswd -cdb /etc/squid3/.squid_users squid squid123
+htpasswd -cdb /etc/apache2/.htpasswd apache apache
+nano /etc/apache2/sites-available/000-default.conf
+add:
+
+<Directory "/var/www/html/">
+	AuthType Basic
+	AuthName 'Basic Auth for Webserver'
+	AuthUserFile '/etc/apache2/.htpasswd'
+	Require valid-user
+</Directory>
+
+service apache2 restart
